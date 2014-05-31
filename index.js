@@ -17,9 +17,9 @@ module.exports = function (settings) {
 
   nets(options, function (err, resp, body) {
     if (err) {
-      settings.error(resp, resp.statusCode, err);
+      settings.error(resp, resp && resp.statusCode, err);
     } else {
-      settings.success(body, resp.statusCode, resp);
+      settings.success(body, resp && resp.statusCode, resp);
     }
   });
 };
