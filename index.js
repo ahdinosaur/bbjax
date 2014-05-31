@@ -3,7 +3,7 @@ var nets = require('nets')
 module.exports = function (settings) {
 
   var options = {
-    url: settings.url,
+    uri: settings.url,
     method: settings.type,
     headers: settings.headers,
     timeout: settings.timeout,
