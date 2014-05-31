@@ -15,7 +15,7 @@ module.exports = function (settings) {
     options.body = settings.data;
   }
 
-  nets(options, function (err, response, body) {
+  nets(options, function (err, resp, body) {
     if (err) {
       settings.error(resp, resp.statusCode, err);
     } else {
